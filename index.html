@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="บริการเช่ารถตู้และแท็กซี่ กรุงเทพ ราคาถูก ปลอดภัย">
+  <meta name="keywords" content="เช่ารถตู้, Taxi กรุงเทพ, รถเช่า ราคาถูก, รถตู้ VIP">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YaYa Taxi | บริการรถตู้และแท็กซี่ กรุงเทพ ราคาถูก</title>
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Sarabun", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #0078d7;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+    .sidebar h2 {
+      margin: 0 0 20px;
+      font-size: 1.2rem;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 8px 0;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 220px;
+      width: 100%;
+    }
+
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-weight: 700; }
+    header p { margin: 5px 0 0; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .hero img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-call { background: #28a745; }
+    .btn-line { background: #06c755; }
+    .btn-book { background: #ff9800; }
+
+    /* Services */
+    .services {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .services h2 { font-size: 2rem; margin-bottom: 20px; }
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .service-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+        left: -200px;
+      }
+      .sidebar.active { left: 0; }
+      .main { margin-left: 0; }
+      .menu-toggle {
+        background: #0078d7;
+        color: white;
+        padding: 10px 15px;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        border-radius: 6px;
+        z-index: 1000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>เมนู</h2>
+    <a href="#">หน้าแรก</a>
+    <a href="#">รถตู้ กรุงเทพ</a>
+    <a href="#">รถตู้ พัทยา</a>
+    <a href="#">รถตู้ เชียงใหม่</a>
+    <a href="#">รถตู้ ภูเก็ต</a>
+    <a href="#">ติดต่อเรา</a>
+  </div>
+
+  <!-- Mobile Menu Toggle -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰ เมนู</div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Header -->
+    <header>
+      <h1>YaYa Taxi & Van Service</h1>
+      <p>บริการรถตู้ VIP และแท็กซี่ กรุงเทพ เดินทางทั่วไทย</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" alt="รถตู้บริการ">
+      <div class="hero-text">
+        <h2>บริการรถตู้และแท็กซี่ กรุงเทพ ราคาถูก</h2>
+        <a href="tel:0992173223" class="btn btn-call">📞 โทรเลย</a>
+        <a href="https://line.me/ti/p/~suroyya00" class="btn btn-line">💬 แอดไลน์</a>
+        <a href="#" class="btn btn-book">📅 จองรถ</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <h2>บริการของเรา</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="รถแท็กซี่">
+          <h3>บริการแท็กซี่</h3>
+          <p>เดินทางสะดวกสบาย ราคามาตรฐาน ปลอดภัยทุกการเดินทาง</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="รถตู้ VIP">
+          <h3>บริการรถตู้ VIP</h3>
+          <p>เหมาะสำหรับครอบครัว หรือหมู่คณะ รองรับผู้โดยสารได้มาก</p>
+        </div>
+        <div class="service-item">
+          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023" alt="เดินทางทั่วไทย">
+          <h3>เดินทางทั่วไทย</h3>
+          <p>บริการรับ-ส่งสนามบิน ต่างจังหวัด เที่ยวทะเล ภูเขา หรือไปงานต่างๆ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 YaYa Taxi & Van Service | โทร: 099-217-3223 | LINE: @suroyya00</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
